@@ -1,62 +1,29 @@
-import React, { useState } from 'react';
-import SplitView from './SplitView';
-import FontsAccordion from './FontsAccordion';
-import './style.css';
-
-const fontsData = [
-  {
-    goodFontName: 'Arial',
-    badFonts: ['Comic Sans MS', 'Papyrus'],
-  },
-  {
-    goodFontName: 'Helvetica',
-    badFonts: ['Times New Roman', 'Courier New'],
-  },
-];
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import PP from "./PP";
+import LK from "./LK";
+import "./style.css";
 
 const App = () => {
-  const [selectedBadFont, setSelectedBadFont] = useState<string | null>(null);
-
-  const handleBadFontSelect = (selectedFont: string) => {
-    setSelectedBadFont(selectedFont);
-  };
-
-  const goodFontsData = fontsData.map((goodFont) => ({
-    fontName: goodFont.goodFontName,
-    samples: ['H1', 'H2', 'H3', 'H4', 'H5', 'P'],
-  }));
-
-  return (
-    <SplitView
-      leftContent={
-        <FontsAccordion
-          fontsData={fontsData.flatMap((pair) =>
-            pair.badFonts.map((badFont) => ({
-              fontName: badFont,
-              samples: ['H1', 'H2', 'H3', 'H4', 'H5', 'P'],
-            }))
-          )}
-          onFontSelect={handleBadFontSelect}
-          isBadFont={true}
-        />
-      }
-      rightContent={
-        <FontsAccordion
-          fontsData={
-            selectedBadFont
-              ? fontsData
-                  .filter((pair) => pair.badFonts.includes(selectedBadFont))
-                  .map(({ goodFontName }) => ({
-                    fontName: goodFontName,
-                    samples: ['H1', 'H2', 'H3', 'H4', 'H5', 'P'],
-                  }))
-              : []
-          }
-          isBadFont={false}
-        />
-      }
-    />
-  );
+    return (
+        <Router>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/pp">PP</Link>
+                        </li>
+                        <li>
+                            <Link to="/lk">LK</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <Routes>
+                    <Route path="/pp" element={<PP />} />
+                    <Route path="/lk" element={<LK />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 };
 
 export default App;

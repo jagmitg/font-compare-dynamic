@@ -1,69 +1,596 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 1rem;
-  font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
-}
-
-h1 {
-  font-weight: 800;
-  font-size: 1.5rem;
+    margin: 0;
+    padding: 1rem;
+    color: black;
+    background-color: white;
 }
 
 .split-view-container {
-  display: flex;
-  width: 100%;
-  height: 100vh;
+    display: flex;
+    width: 100%;
+    height: 100vh;
 }
 
 .split-view {
-  width: 50%;
-  padding: 20px;
+    width: 50%;
+    padding: 20px;
 }
 
 .left-view {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .right-view {
-  background-color: #e0e0e0;
+    background-color: #e0e0e0;
 }
 
 .view-header {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .content-div {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .split-view {
-  flex: 1;
-  padding: 20px;
+    flex: 1;
+    padding: 20px;
 }
 
 .view-header {
-  font-size: 24px;
-  margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .content-div,
 button {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border: none;
-  cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    border: 1px solid grey;
 }
 
 button:hover {
-  background-color: #e0e0e0;
+    background-color: #e0e0e0;
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-title {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+}
+
+.accordion-content {
+    display: flex;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 20px;
+}
+
+/* style.css */
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/** LK RIGHT FONT  **/
+
+/* AlegreyaSans-Black */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-Black.ttf") format("truetype");
+}
+
+.alegreya-sans-black {
+    font-family: "AlegreyaSans";
+}
+
+/* AlegreyaSans-BlackItalic */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-BlackItalic.ttf") format("truetype");
+}
+
+.alegreya-sans-black-italic {
+    font-family: "AlegreyaSans";
+}
+
+/* AlegreyaSans-Bold */
+@font-face {
+    font-family: "AlegreyaSansBold";
+    src: url("./fonts/lk-new/AlegreyaSans-Bold.ttf") format("truetype");
+}
+
+.alegreya-sans-bold {
+    font-family: "AlegreyaSansBold";
+}
+
+/* AlegreyaSans-BoldItalic */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-BoldItalic.ttf") format("truetype");
+}
+
+.alegreya-sans-bold-italic {
+    font-family: "AlegreyaSans";
+}
+
+/* AlegreyaSans-ExtraBold */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-ExtraBold.ttf") format("truetype");
+}
+
+.alegreya-sans-extra-bold {
+    font-family: "AlegreyaSans";
+}
+
+/* AlegreyaSans-ExtraBoldItalic */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-ExtraBoldItalic.ttf") format("truetype");
+}
+
+.alegreya-sans-extra-bold-italic {
+    font-family: "AlegreyaSans";
+}
+
+/* AlegreyaSans-Italic */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-Italic.ttf") format("truetype");
+}
+
+.alegreya-sans-italic {
+    font-family: "AlegreyaSans";
+}
+
+/* AlegreyaSans-Light */
+@font-face {
+    font-family: "AlegreyaSansLight";
+    src: url("./fonts/lk-new/AlegreyaSans-Light.ttf") format("truetype");
+}
+
+.alegreya-sans-light {
+    font-family: "AlegreyaSansLight";
+}
+
+/* AlegreyaSans-LightItalic */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-LightItalic.ttf") format("truetype");
+}
+
+.alegreya-sans-light-italic {
+    font-family: "AlegreyaSans";
+}
+
+/* AlegreyaSans-Medium */
+@font-face {
+    font-family: "AlegreyaSansMedium";
+    src: url("./fonts/lk-new/AlegreyaSans-Medium.ttf") format("truetype");
+}
+
+.alegreya-sans-medium {
+    font-family: "AlegreyaSansMedium";
+}
+
+/* AlegreyaSans-MediumItalic */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-MediumItalic.ttf") format("truetype");
+}
+
+.alegreya-sans-medium-italic {
+    font-family: "AlegreyaSans";
+}
+
+/* AlegreyaSans-Regular */
+@font-face {
+    font-family: "AlegreyaSansRegular";
+    src: url("./fonts/lk-new/AlegreyaSans-Regular.ttf") format("truetype");
+}
+
+.alegreya-sans-regular {
+    font-family: "AlegreyaSansRegular";
+}
+
+/* AlegreyaSans-Thin */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-Thin.ttf") format("truetype");
+}
+
+.alegreya-sans-thin {
+    font-family: "AlegreyaSans";
+}
+
+/* AlegreyaSans-ThinItalic */
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./fonts/lk-new/AlegreyaSans-ThinItalic.ttf") format("truetype");
+}
+
+.alegreya-sans-thin-italic {
+    font-family: "AlegreyaSans";
+}
+
+/* Priority Pass Old */
+
+/* Cabin Regular */
+@font-face {
+    font-family: "CabinRegular";
+    src: url("./fonts/pp-old/cabin-regular-webfont.eot");
+    src: url("./fonts/pp-old/cabin-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/pp-old/cabin-regular-webfont.woff2") format("woff2"),
+        url("./fonts/pp-old/cabin-regular-webfont.woff") format("woff"),
+        url("./fonts/pp-old/cabin-regular-webfont.ttf") format("truetype");
+}
+
+.cabin-regular {
+    font-family: "CabinRegular";
+}
+
+/* ProbaPro Bold */
+@font-face {
+    font-family: "ProbaProBold";
+    src: url("./fonts/pp-old/probapro-bold-webfont.eot");
+    src: url("./fonts/pp-old/probapro-bold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/pp-old/probapro-bold-webfont.woff2") format("woff2"),
+        url("./fonts/pp-old/probapro-bold-webfont.woff") format("woff"),
+        url("./fonts/pp-old/probapro-bold-webfont.ttf") format("truetype"),
+        url("./fonts/pp-old/probapro-bold-webfont.svg#probapro-bold") format("svg");
+}
+
+.probapro-bold {
+    font-family: "ProbaProBold";
+}
+
+/* ProbaPro Italic */
+@font-face {
+    font-family: "ProbaProItalic";
+    src: url("./fonts/pp-old/probapro-italic-webfont.eot");
+    src: url("./fonts/pp-old/probapro-italic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/pp-old/probapro-italic-webfont.woff2") format("woff2"),
+        url("./fonts/pp-old/probapro-italic-webfont.woff") format("woff"),
+        url("./fonts/pp-old/probapro-italic-webfont.ttf") format("truetype"),
+        url("./fonts/pp-old/probapro-italic-webfont.svg#probapro-italic") format("svg");
+}
+
+.probapro-italic {
+    font-family: "ProbaProItalic";
+}
+
+/* ProbaPro Light */
+@font-face {
+    font-family: "ProbaProLight";
+    src: url("./fonts/pp-old/probapro-light-webfont.eot");
+    src: url("./fonts/pp-old/probapro-light-webfont.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/pp-old/probapro-light-webfont.woff2") format("woff2"),
+        url("./fonts/pp-old/probapro-light-webfont.woff") format("woff"),
+        url("./fonts/pp-old/probapro-light-webfont.ttf") format("truetype"),
+        url("./fonts/pp-old/probapro-light-webfont.svg#probapro-light") format("svg");
+}
+
+.probapro-light {
+    font-family: "ProbaProLight";
+}
+
+/* ProbaPro Medium */
+@font-face {
+    font-family: "ProbaProMedium";
+    src: url("./fonts/pp-old/probapro-medium-webfont.eot");
+    src: url("./fonts/pp-old/probapro-medium-webfont.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/pp-old/probapro-medium-webfont.woff2") format("woff2"),
+        url("./fonts/pp-old/probapro-medium-webfont.woff") format("woff"),
+        url("./fonts/pp-old/probapro-medium-webfont.ttf") format("truetype"),
+        url("./fonts/pp-old/probapro-medium-webfont.svg#probapro-medium") format("svg");
+}
+
+.probapro-medium {
+    font-family: "ProbaProMedium";
+}
+
+/* ProbaPro Regular */
+@font-face {
+    font-family: "ProbaProRegular";
+    src: url("./fonts/pp-old/probapro-regular-webfont.eot");
+    src: url("./fonts/pp-old/probapro-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/pp-old/probapro-regular-webfont.woff2") format("woff2"),
+        url("./fonts/pp-old/probapro-regular-webfont.woff") format("woff"),
+        url("./fonts/pp-old/probapro-regular-webfont.ttf") format("truetype"),
+        url("./fonts/pp-old/probapro-regular-webfont.svg#probapro-regular") format("svg");
+}
+
+.probapro-regular {
+    font-family: "ProbaProRegular";
+}
+
+/* ProbaPro SemiBold */
+@font-face {
+    font-family: "ProbaProSemiBold";
+    src: url("./fonts/pp-old/probapro-semibold-webfont.eot");
+    src: url("./fonts/pp-old/probapro-semibold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("./fonts/pp-old/probapro-semibold-webfont.woff2") format("woff2"),
+        url("./fonts/pp-old/probapro-semibold-webfont.woff") format("woff"),
+        url("./fonts/pp-old/probapro-semibold-webfont.ttf") format("truetype"),
+        url("./fonts/pp-old/probapro-semibold-webfont.svg#probapro-semibold") format("svg");
+}
+
+.probapro-semibold {
+    font-family: "ProbaProSemiBold";
+}
+
+/* PP - New */
+
+/* Roboto Black */
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/pp-new/Roboto-Black.ttf") format("truetype");
+}
+
+.roboto-black {
+    font-family: "Roboto";
+}
+
+/* Roboto Black Italic */
+@font-face {
+    font-family: "RobotoBlackItalic";
+    src: url("./fonts/pp-new/Roboto-BlackItalic.ttf") format("truetype");
+}
+
+.roboto-black-italic {
+    font-family: "RobotoBlackItalic";
+}
+
+/* Roboto Bold */
+@font-face {
+    font-family: "RobotoBold";
+    src: url("./fonts/pp-new/Roboto-Bold.ttf") format("truetype");
+}
+
+.roboto-bold {
+    font-family: "RobotoBold";
+}
+
+/* Roboto Bold Italic */
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/pp-new/Roboto-BoldItalic.ttf") format("truetype");
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto";
+}
+
+/* Roboto Italic */
+@font-face {
+    font-family: "RobotoItalic";
+    src: url("./fonts/pp-new/Roboto-Italic.ttf") format("truetype");
+}
+
+.roboto-italic {
+    font-family: "RobotoItalic";
+}
+
+/* Roboto Light */
+@font-face {
+    font-family: "RobotoLight";
+    src: url("./fonts/pp-new/Roboto-Light.ttf") format("truetype");
+}
+
+.roboto-light {
+    font-family: "RobotoLight";
+}
+
+/* Roboto Light Italic */
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/pp-new/Roboto-LightItalic.ttf") format("truetype");
+}
+
+.roboto-light-italic {
+    font-family: "Roboto";
+}
+
+/* Roboto Medium */
+@font-face {
+    font-family: "RobotoMedium";
+    src: url("./fonts/pp-new/Roboto-Medium.ttf") format("truetype");
+}
+
+.roboto-medium {
+    font-family: "RobotoMedium";
+}
+
+/* Roboto Medium Italic */
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/pp-new/Roboto-MediumItalic.ttf") format("truetype");
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto";
+}
+
+/* Roboto Regular */
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("./fonts/pp-new/Roboto-Regular.ttf") format("truetype");
+}
+
+.roboto-regular {
+    font-family: "RobotoRegular";
+}
+
+/* Roboto Thin */
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/pp-new/Roboto-Thin.ttf") format("truetype");
+}
+
+.roboto-thin {
+    font-family: "Roboto";
+}
+
+/* Roboto Thin Italic */
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/pp-new/Roboto-ThinItalic.ttf") format("truetype");
+}
+
+.roboto-thin-italic {
+    font-family: "Roboto";
+}
+
+/*LK Old */
+
+/* Cabin Bold */
+@font-face {
+    font-family: "CabinBold";
+    src: url("./fonts/lk-old/cabin-bold-webfont.woff2") format("woff2"),
+        url("./fonts/lk-old/cabin-bold-webfont.woff") format("woff");
+}
+
+.cabin-bold {
+    font-family: "CabinBold";
+}
+
+/* Cabin Medium */
+@font-face {
+    font-family: "CabinMedium";
+    src: url("./fonts/lk-old/cabin-medium-webfont.woff2") format("woff2"),
+        url("./fonts/lk-old/cabin-medium-webfont.woff") format("woff");
+}
+
+.cabin-medium {
+    font-family: "CabinMedium";
+}
+
+/* Cabin Regular */
+@font-face {
+    font-family: "Cabin";
+    src: url("./fonts/lk-old/cabin-regular-webfont.woff2") format("woff2"),
+        url("./fonts/lk-old/cabin-regular-webfont.woff") format("woff");
+}
+
+.cabin-regular {
+    font-family: "Cabin";
+}
+
+/* Cabin SemiBold */
+@font-face {
+    font-family: "CabinSemiBold";
+    src: url("./fonts/lk-old/cabin-semibold-webfont.woff2") format("woff2"),
+        url("./fonts/lk-old/cabin-semibold-webfont.woff") format("woff");
+}
+
+.cabin-semibold {
+    font-family: "CabinSemiBold";
+}
+
+/* CoreSansA35 */
+@font-face {
+    font-family: "CoreSansA35";
+    src: url("./fonts/lk-old/CoreSansA35-webfont.woff2") format("woff2"),
+        url("./fonts/lk-old/CoreSansA35-webfont.woff") format("woff");
+}
+
+.coresansa35 {
+    font-family: "CoreSansA35";
+}
+
+/* CoreSansA45 */
+@font-face {
+    font-family: "CoreSansA45";
+    src: url("./fonts/lk-old/CoreSansA45-webfont.woff2") format("woff2"),
+        url("./fonts/lk-old/CoreSansA45-webfont.woff") format("woff");
+}
+
+.coresansa45 {
+    font-family: "CoreSansA45";
+}
+
+/* CoreSansG Medium */
+@font-face {
+    font-family: "CoreSansG";
+    src: url("./fonts/lk-old/coresansg-medium-webfont.woff2") format("woff2"),
+        url("./fonts/lk-old/coresansg-medium-webfont.woff") format("woff");
+}
+
+.coresansg-medium {
+    font-family: "CoreSansG";
+}
+
+/* Crimson Bold */
+@font-face {
+    font-family: "CrimsonBold";
+    src: url("./fonts/lk-old/crimson-bold-webfont.woff") format("woff");
+}
+
+.crimson-bold {
+    font-family: "CrimsonBold";
+}
+
+/* Crimson Roman */
+@font-face {
+    font-family: "CrimsonRoman";
+    src: url("./fonts/lk-old/crimson-roman-webfont.woff") format("woff");
+}
+
+.crimson-roman {
+    font-family: "CrimsonRoman";
+}
+
+/* NotoSans */
+@font-face {
+    font-family: "NotoSans";
+    src: url("./fonts/lk-old/NotoSans.woff") format("woff");
+}
+
+.notosans {
+    font-family: "NotoSans";
 }
